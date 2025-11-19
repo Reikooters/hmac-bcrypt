@@ -33,7 +33,7 @@ namespace hmac_bcrypt
                 pepper = BCRYPT_PEPPER;
             }
 
-            HMACSHA512 hmac = new HMACSHA512(
+            using HMACSHA512 hmac = new HMACSHA512(
                 Encoding.UTF8.GetBytes(pepper)
             );
 
