@@ -25,8 +25,8 @@ namespace hmac_bcrypt
 
             if (string.IsNullOrEmpty(salt)) {
                 settings = BCrypt.Net.BCrypt.GenerateSalt(cost);
-            } else if (settings != null) {
-                settings = settings[..29];
+            } else {
+                settings = settings![..29];
             }
 
             if (string.IsNullOrEmpty(pepper)) {
